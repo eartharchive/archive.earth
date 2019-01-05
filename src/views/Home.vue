@@ -38,16 +38,16 @@ export default {
   },
   data(){
     return {
-      globeDrop: 480
+      globeDrop: 250
     }
   },
   methods: {
     setGlobeDrop(){
       if(window.innerWidth >= 768){
-        this.globeDrop = 480
+        this.globeDrop = 250
       }
       else{
-        this.globeDrop = 320
+        this.globeDrop = 250
       }
     },
 
@@ -79,7 +79,7 @@ export default {
   font-weight: 200;
   color: black;
   position: absolute;
-  top: 387px;
+  top: 150px;
   left: 0;
   right: 0;
 }
@@ -98,7 +98,7 @@ export default {
   position: absolute;
   left: 0;
   right: 0;
-  top: 470px;
+  top: 250px;
 }
 
 .home-page .folder-wrapper .inner{
@@ -137,7 +137,7 @@ export default {
   }
   
   .home-page h1{
-    top: 287px;
+    top: 120px;
     line-height: 50px;
   }
 }
@@ -145,12 +145,12 @@ export default {
 @media screen and (max-width:768px){
 
   .home-page h1{
-    top: 200px;
+    top: 130px;
   }
 
   .home-page .folder-wrapper{
     margin-top: 30px;
-    top: 300px;
+    top: 220px;
   }
 
   .home-page .folder-wrapper .inner{

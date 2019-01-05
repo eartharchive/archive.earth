@@ -34,7 +34,7 @@ export default {
     z-index: 10;
 }
 .nav-bar .logo{
-    height: 250px;
+    height: 200px;
     width: 100%;
     float: left;
     clear: both;
@@ -68,11 +68,15 @@ export default {
 
 @media screen and (max-width:1471px) {
     .nav-bar{
-        width: 200px;
+        width: 150px;
     }
 
     .nav-bar .menu li a{
         font-size: 30px;
+    }
+
+    .nav-bar .logo{
+        height: 150px;
     }
 }
 

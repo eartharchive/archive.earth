@@ -39,7 +39,7 @@ export default {
 .contents {
 	background-color: #F5F5F5;
 	margin: 0 12.3%;
-	min-height: 740px;
+	min-height: 500px;
 	position: relative;
 	overflow: hidden;
 	padding: 0 6% 50px 6%
@@ -73,7 +73,7 @@ export default {
 @media screen and (max-width:768px) {
 	.contents{
 		margin: 0 8%;
-		min-height: 500px;
+		min-height: 400px;
 	}
 
 	.header{
