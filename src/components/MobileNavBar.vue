@@ -1,6 +1,6 @@
 1<template>
 <div>
-	<div class="menu-overlay" v-if="menu"></div>
+	<div class="menu-overlay"></div>
 	<nav class="mobile-nav">
     <div class="logo">
       <router-link to="/">
@@ -12,13 +12,13 @@
 			<b-icon
 					icon="menu"
 					size="is-large"
-					v-if="!menu"
+					id="burger-menu-btn"
 					>
 			</b-icon>
 			<b-icon
 					icon="close"
 					size="is-large"
-					v-if="menu"
+					id="close-menu-btn"
 					>
 			</b-icon>
 		</div>
@@ -40,17 +40,39 @@
 </template>
 
 <script>
+import TweenLite from 'gsap'
 export default {
+
 	data(){
 		return {
 			menu: false,
+			btnScale: 0,
+			btnRotation: 0,
+			overlayScale: 0
 		}
 	},
 
 	methods: {
 		toggleMenu(){
 			this.menu = !this.menu
-			console.log(this.menu)
+
+			TweenLite.to('#close-menu-btn', .2, {
+				scale: Math.abs(this.btnScale - 1),
+				rotation: Math.abs(this.btnRotation - 180),
+				display: 'inline-flex'
+			})
+
+			TweenLite.to('#burger-menu-btn', .2, {
+				scale: this.btnScale,
+			})
+
+			this.btnScale = Math.abs(this.btnScale - 1)
+			this.btnRotation = Math.abs(this.btnRotation - 180)
+
+			this.overlayScale = Math.abs(this.overlayScale - 100 ) ;
+			TweenLite.to('.menu-overlay', .4, {
+				scale: this.overlayScale,
+			})
 		}
 	}
 };
@@ -59,11 +81,18 @@ export default {
 <style>
 .menu-overlay{
 	position: absolute;
-	width: 100%;
-	height: 100%;
+	width: 100px;
+	height: 100px;
 	z-index: 10;
-	background-color: #f8f8f8;
+	background-color: #ffffff;
 	opacity: .95;
+	border-radius: 50%;
+	top: -100px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	border-color: #333;
+	border-width: 2px;
 }
 .mobile-nav{
 	position: absolute;
@@ -82,8 +111,17 @@ export default {
 
 .mobile-nav .menu-toggle-btn{
 	float: right;
-	padding: 35px 4.5% 0 0;
 	color: #999999;
+}
+
+.mobile-nav .menu-toggle-btn .icon{
+	position: absolute;
+	top: 30px;
+	right: 20px;
+}
+
+.mobile-nav .menu-toggle-btn .icon:nth-child(2){
+	display: none;
 }
 
 .mobile-nav .menu{
