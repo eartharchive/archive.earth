@@ -47,6 +47,11 @@ export default {
 }
 
 @media screen and (max-width:768px){
+
+  .home-page{
+    top: 200px;
+  }
+
   .home-page h1 b{
     font-size: 45px;
     display: block;

@@ -73,12 +73,18 @@ export default {
 @media screen and (max-width:768px) {
 	.contents{
 		margin: 0 8%;
+		min-height: 500px;
 	}
 
 	.header{
 		margin-top: 100px;
 		font-size: 37px;
 		line-height: 40px;
+	}
+
+	.polygon{
+		margin: 0 8%;
+		height: 200px;;
 	}
 }
 
