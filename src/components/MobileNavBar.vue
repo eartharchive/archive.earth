@@ -12,7 +12,13 @@
 			<b-icon
 					icon="menu"
 					size="is-large"
-					
+					v-if="!menu"
+					>
+			</b-icon>
+			<b-icon
+					icon="close"
+					size="is-large"
+					v-if="menu"
 					>
 			</b-icon>
 		</div>
