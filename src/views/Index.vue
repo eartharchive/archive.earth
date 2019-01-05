@@ -7,6 +7,7 @@
 					<router-view />
 
 				</div>
+				<div class="polygon"></div>
         
     </div>
     
@@ -38,12 +39,17 @@ export default {
 .contents {
 	background-color: #F5F5F5;
 	margin: 0 12.3%;
-	-webkit-clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
-	clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
-	min-height: 1000px;
+	min-height: 740px;
 	position: relative;
 	overflow: hidden;
-	padding: 0 6% 300px 6%
+	padding: 0 6% 50px 6%
+}
+.polygon{
+	-webkit-clip-path: polygon(0 0, 50% 100%, 100% 0);
+	clip-path: polygon(0 0, 50% 100%, 100% 0);
+	height: 300px;
+	background-color: #F5F5F5;
+	margin: 0 12.3%;
 }
 
 .header{

@@ -12,6 +12,7 @@
   text-align: center;
   height: 100vh;
   font-weight: 300;
+  color: black;
 }
 #nav {
   padding: 30px;

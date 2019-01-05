@@ -86,7 +86,8 @@ export default {
 
 .mobile-nav .menu li a{
     color: rgba(26, 51, 21, 1.0);
-    font-size: 30px;
+		font-size: 30px;
+		font-weight: 700;
 }
 
 .mobile-nav .menu li {
